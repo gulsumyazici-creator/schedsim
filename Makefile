@@ -22,9 +22,6 @@ testcases: $(EXEC)
 		./$(EXEC) < $$infile > $(OUTPUT_DIR)/$$outfile; \
 	done
 
-grade: $(EXEC)
-	python3 test/grader.py ./$(EXEC) $(TEST_DIR)
-
 clean:
 	rm -f $(EXEC)
 	rm -rf $(OUTPUT_DIR)
